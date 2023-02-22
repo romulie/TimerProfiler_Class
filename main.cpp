@@ -7,8 +7,9 @@
 
 int main(){
 
-    {MyTimer t("MY_TIMER");
-    MyTimer tt("****TIMER");
+{
+MyTimer t("MY_TIMER");
+MyTimer tt("****TIMER");
 
     for (size_t i = 0; i < 5; ++i){
         for (size_t j = 0; j < 10; ++j){
@@ -18,7 +19,8 @@ int main(){
         }
         std::cout << std::endl;
         t.getTime("there+++ "+std::to_string(i));
+        if (i == 3) t.resetTime("3rd iteration");
     }
-    }
+}
     return 0;
 }
